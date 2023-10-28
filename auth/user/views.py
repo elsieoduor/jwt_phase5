@@ -16,8 +16,8 @@ class registerview(APIView):
   
 class loginview(APIView):
   def post(self, request):
-    email = request.data('email')
-    password = request.data('password')
+    email = request.data['email']
+    password = request.data['password']
 
     user = User.objects.filter(email=email).first()
     if user is None:
@@ -28,11 +28,17 @@ class loginview(APIView):
     
     payload ={
       'id':user.id,
-      'exp':datetime.datetime.utcnow() + datetime.timedelta(hour=1),
+      'exp':datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
       'iat': datetime.datetime.utcnow()
     }
 
-    token = jwt.encode(payload, 'secret', algorithm= 'HS256').decode('utf-8')
+    # token = jwt.encode(payload, 'secret', algorithm= 'HS256').decode('utf-8')
+    token_bytes = jwt.encode(payload, 'secret', algorithm='HS256')
+    if isinstance(token_bytes, bytes):
+          token = token_bytes.decode('utf-8')
+    else:
+          # Handle the case where token_bytes is not bytes (e.g., already a string)
+          token = token_bytes
 
     response = Response()
     response.set_cookie(key='jwt', value=token, httponly=True)
