@@ -1,0 +1,146 @@
+
+h1 {
+  color: #333;
+}
+
+.mission-vision {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.mission,
+.vision {
+  width: 45%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.what-we-have-done,
+.features,
+.donations {
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.what-we-have-done,
+.features,
+.donations h2 {
+  text-align: center;
+}
+
+.what-we-have-done p,
+.features p,
+.donations p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* new */
+.what-we-have-done {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.what-we-have-done h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.what-we-have-done p {
+  font-style: italic;
+  color: #555;
+} 
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.achievement {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.achievement img {
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Style for 'Features of Our Organization' section */
+.features {
+  text-align: center;
+  padding: 20px;
+}
+
+.features h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.features p {
+  font-style: italic;
+  color: #555;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features ul li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Style for 'Donate Now' section */
+.donations {
+  text-align: center;
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+.donations h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.donations p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.donations p:last-child {
+  font-style: italic;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7; 
+}
+
+.hero-text {
+  position: absolute;
+  text-align: center;
+  color: black;
+  z-index: 1; 
+  padding: 20px; 
+  margin-left: 400px;
+}

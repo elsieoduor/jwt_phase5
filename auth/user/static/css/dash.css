@@ -1,0 +1,115 @@
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Parent container for the sidebar and content */
+.main {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  overflow-y: auto; 
+}
+
+/* List items in the sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Hide text by default */
+.text {
+  display: none;
+}
+
+/* Display text when hovered */
+.sidebar a:hover .text {
+  display: inline;
+}
+
+/* Display icons when not hovered */
+.sidebar a .icon {
+  display: inline;
+}
+
+.sidebar a:hover .icon {
+  display: none;
+}
+
+/* Styling links */
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Content section styles */
+.dashboard {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sections */
+.section {
+  margin: 20px 10px;
+  width: 80%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f5f5f5;
+  flex-grow: 1;
+}
+
+/* Cards */
+.card {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* Search bar */
+.search-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #337ab7;
+  color: #fff;
+  cursor: pointer;
+}

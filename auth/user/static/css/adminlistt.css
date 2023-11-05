@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+.search-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.add-homes-btn {
+  padding: 8px 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+.homes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.icons a {
+  text-decoration: none;
+  color: #333;
+}

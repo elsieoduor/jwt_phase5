@@ -1,0 +1,37 @@
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+.event-card {
+  width: 45%; /* Adjust the width as needed */
+  margin: 10px 0;
+  border: 1px solid #a8a6a6;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  
+}
+.event-card:hover{
+  transform: scale(1.05);
+  color: black;
+}
+
+.event-card img {
+  width: 40%; /* Adjust the width as needed */
+  height: auto;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.event-info {
+  padding: 10px;
+}
+
+.event-info h3,
+.event-info p {
+  margin: 5px 0;
+}

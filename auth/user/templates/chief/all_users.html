@@ -1,0 +1,67 @@
+
+
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}Dashboard{% endblock %} 
+{% block css %}{% static "css/users.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+<main class="main">
+  <div class="user-page">
+    <div class="sidebar">
+      <a href="{%url 'chief_dashboard'%}"><h2>Dashboard</h2></a>
+      <ul>
+          <li>
+              <a href="{%url 'children_homes'%}">
+                  <span class="icon">🏠</span>
+                  <span class="text">Homes</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'users'%}">
+                  <span class="icon">👥</span>
+                  <span class="text">Users</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'most_visited_home'%}">
+                  <span class="icon">📊</span>
+                  <span class="text">Analytics</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="{%url 'most_visited_home'%}">
+                <span class="icon">📊</span>
+                <span class="text">Analytics</span>
+            </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search users...">
+                <button class="search-button">Search</button>
+            </div>
+            <button class="add-button">Add</button>
+        </div>
+        <div class="user-cards">
+            <div class="user-card">
+                <div class="user-info">
+                    <!-- User information (name, email, role, etc.) -->
+                </div>
+            </div>
+            <!-- Additional user cards can be added here -->
+        </div>
+    </div>
+</div>
+</main>
+
+
+<footer class="footer">
+  <p>&copy; 2023 Hearts to Homes.  All Rights Reserved.</p>
+</footer>
+{% endblock %} 

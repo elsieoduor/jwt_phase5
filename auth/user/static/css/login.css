@@ -1,0 +1,50 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #a8a6a6;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+p{
+  font-size: 12px;
+}
+/* a:visited{
+  color: black;
+} */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #04AA6D;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #00885D;
+}

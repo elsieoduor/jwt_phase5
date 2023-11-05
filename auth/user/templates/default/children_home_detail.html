@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home Details{% endblock %}
+{% block css %}
+<style>
+    .home-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .home-details h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .home-details img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .home-details p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .donate {
+        background-color: #4CAF50;
+    }
+
+    .visit-date {
+        background-color: #008CBA;
+    }
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+{% include 'includes/nav.html' %}
+
+<main class="main">
+    <div class="home-details">
+        <h2>{{ children_home.name }}</h2>
+        {% comment %} <img src="{{ children_home.image.url }}" alt="{{ children_home.name }}"> {% endcomment %}
+        <p>Location: {{ children_home.location }}</p>
+        <p>Mission: {{ children_home.mission }}</p>
+        <p>Needs: {{ children_home.needs}}</p>
+        <p>Visit: {{ children_home.visit }}</p>
+        <p>Vision: {{ children_home.vision}}</p>
+
+        <div class="buttons">
+          <a href="{% url 'donations'%}" class="button donate">Donate</a>
+          <a href="{% url 'schedule_visit' children_home.id%}" class="button visit-date">Set Visit Date</a>
+      </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2023 Hearts to Homes. All Rights Reserved.</p>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block css %}{% static "css/index.css" %} {% endblock %}
+{% block title %}Home{% endblock %} 
+
+{% block body %}
+{% include 'includes/nav.html'%}
+
+<main class="main">
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="carousel">
+        <img src="{% static 'images/children4.jpg'%}" alt="Image 1">
+    </div>
+    <div class="hero-text">
+        <h1>Welcome to Hearts to Homes</h1>
+        <p>Your message here</p>
+    </div>
+  </div>
+
+<!-- About Us Section -->
+  <div class="about-us">
+    <img src="{% static 'images/helpinghand.jpg'%}" alt="About Us">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <p>Some information about your organization or cause goes here.</p>
+        <a href="{% url 'about' %}">Learn More</a>
+    </div>
+  </div>
+
+<!-- Donations Section -->
+  <div class="donations">
+    <div class="donation-card">
+        <img src="{% static 'images/household.jpg'%}" alt="Donation 1">
+        <div class="donation-details">
+            <p>Donation 1 description goes here.</p>
+            <a href="{% url 'donations' %}">Donate</a>
+        </div>
+    </div>
+      <div class="donation-card">
+        <img src="{% static 'images/clothes.jpg'%}" alt="Donation 1">
+        <div class="donation-details">
+            <p>Donation 1 description goes here.</p>
+            <a href="{% url 'donations' %}">Donate</a>
+        </div>
+    </div>
+    <div class="donation-card">
+      <img src="{% static 'images/packedfood.jpg'%}" alt="Donation 1">
+      <div class="donation-details">
+          <p>Donation 1 description goes here.</p>
+          <a href="{% url 'donations' %}">Donate</a>
+      </div>
+    </div>
+  </div>
+
+<!-- Events Section -->
+  <div class="events">
+    <div class="event-card">
+        <img src="{% static 'images/children2.jpg'%}" alt="Event 1">
+        <div class="event-details">
+            <h3>Event 1</h3>
+            <p>Date: DD/MM/YYYY</p>
+            <p>Time: HH:MM AM/PM</p>
+            <p>Location: Event Location</p>
+        </div>
+    </div>
+    <div class="event-card">
+      <img src="{% static 'images/children2.jpg'%}" alt="Event 1">
+      <div class="event-details">
+          <h3>Event 1</h3>
+          <p>Date: DD/MM/YYYY</p>
+          <p>Time: HH:MM AM/PM</p>
+          <p>Location: Event Location</p>
+      </div>
+  </div>
+
+</main>
+
+{% include 'includes/footer.html'%}
+{% endblock %} 

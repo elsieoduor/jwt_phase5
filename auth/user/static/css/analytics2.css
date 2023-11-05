@@ -1,0 +1,159 @@
+
+/* Main content styles */
+.main-content {
+  padding: 20px;
+  margin-left: 200px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.admin-dashboard {
+  display: flex;
+}
+/* Analytics section styles */
+.analytics-section {
+  margin: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.analytics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.most-visited, .need-donations {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.homes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.home-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+
+
+.analytics {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.most-visited, .need-donations {
+  width: 45%;
+  margin-right: 20px;
+}
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  /* position: fixed; */
+  
+  overflow: auto;
+  top: 0;
+  left: 0;
+  /* margin-top: 91px; */
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Hide text by default */
+.text {
+  display: none;
+}
+
+/* Display text when hovered */
+.sidebar a:hover .text {
+  display: inline;
+}
+
+/* Display icons when not hovered */
+.sidebar a .icon {
+  display: inline;
+}
+
+.sidebar a:hover .icon {
+  display: none;
+}
+
+/* Styling links */
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+
+/* Analytics chart styles */
+.analytics-chart {
+  margin: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.bar {
+  margin: 5px 0;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.donation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.donation-table th, .donation-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.donation-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}

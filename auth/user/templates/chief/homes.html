@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block title %}Edit homes{% endblock %} 
+{% block css %}{% static "css/adminlist.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+
+<div class="search-container">
+  <form action="{% url 'search_children_homes' %}" method="GET">
+      <input type="text" name="query" placeholder="Search...">
+      <input type="text" name="location" placeholder="Location...">
+      <input type="submit" value="Search">
+  </form>
+  <a class="add-homes-btn" href="{% url 'add_home' %}">Add Homes</a>
+</div>
+
+<div class="homes-list">
+  {% for home in homes %}
+  <div class="home-item">
+      <h2>{{ home.name }}</h2>
+      <p>Location: {{ home.location }}</p>
+      <p>Mission: {{ home.mission }}</p>
+      <!-- Add other home details as needed -->
+      <div class="icons">
+          <a href="{% url 'edit_home' home.id %}">
+              <img src="path/to/edit-icon.png" alt="Edit">
+          </a>
+          <a href="{% url 'delete_home' home.id %}">
+              <img src="path/to/delete-icon.png" alt="Delete">
+          </a>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+{% endblock %} 
+

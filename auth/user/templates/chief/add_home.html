@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block title %}Add homes{% endblock %} 
+{% block css %}{% static "css/addhome.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+
+<main class="main">
+  <h1>Add Home</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Home">
+    </form>
+    
+  </div>
+  
+</main>
+
+{% endblock %} 
+
+
+

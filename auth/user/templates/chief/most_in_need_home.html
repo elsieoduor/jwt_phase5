@@ -1,0 +1,98 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block title %}Analytics {% endblock %} 
+{% block css %}{% static "css/analytics2.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+
+<main class="main">
+  <div class="admin-dashboard">
+    <div class="sidebar">
+      <a href="{%url 'chief_dashboard'%}"><h2>Dashboard</h2></a>
+      <ul>
+          <li>
+              <a href="{%url 'children_homes'%}">
+                  <span class="icon">🏠</span>
+                  <span class="text">Homes</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'users'%}">
+                  <span class="icon">👥</span>
+                  <span class="text">Users</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'most_visited_home'%}">
+                  <span class="icon">📊</span>
+                  <span class="text">Most Visited</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="{%url 'most_visited_home'%}">
+                <span class="icon">📊</span>
+                <span class="text">Most in need</span>
+            </a>
+        </li>
+
+          <li>
+            <a href="{%url 'most_visited_home'%}">
+                <span class="icon">📊</span>
+                <span class="text">Analytics</span>
+            </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+        <h1>Analytics Dashboard</h1>
+        <div class="analytics-section">
+            <h2>Children's Homes Analytics</h2>
+            <div class="analytics">
+                <div class="most-visited">
+                    <h3>Most Visited Homes</h3>
+                    <div class="bar-chart">
+                      <!-- Bar chart container -->
+                      <div class="bar" style="width: 60%; background-color: #3498db;">Home A (60%)</div>
+                      <div class="bar" style="width: 40%; background-color: #e74c3c;">Home B (40%)</div>
+                      <div class="bar" style="width: 30%; background-color: #27ae60;">Home C (30%)</div>
+                      <!-- Add more bars as needed -->
+                  </div>
+                    <!-- Display analytics for most visited homes -->
+                    <!-- Table, chart, or list of most visited homes -->
+                </div>
+                <div class="need-donations">
+                    <h3>Homes in Need of Donations</h3>
+                    <table class="donation-table">
+                      <thead>
+                          <tr>
+                              <th>Home Name</th>
+                              <th>Needs</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Home A</td>
+                              <td>Medicines, Clothing</td>
+                          </tr>
+                          <tr>
+                              <td>Home B</td>
+                              <td>Food, School Supplies</td>
+                          </tr>
+                          <!-- Add more rows as needed -->
+                      </tbody>
+                  </table>
+                    <!-- Display analytics for homes in need of donations -->
+                    <!-- Table, chart, or list of homes needing donations -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+{% endblock %} 

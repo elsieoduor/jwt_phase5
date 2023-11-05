@@ -1,0 +1,41 @@
+.contacts-container{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.contact-card {
+  width: 300px;
+  margin: 10px;
+}
+
+.contact-card h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.contact-card p {
+  margin-top: 10px;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.map-container {
+  width: 400px;
+  height: 350px;
+}
+
+.map {
+  width: 100%;
+  height: 90%;
+}
+h3{
+  text-align: center;
+}

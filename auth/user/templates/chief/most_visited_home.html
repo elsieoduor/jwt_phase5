@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}Analytics - Most Visited Homes{% endblock %} 
+{% block css %}{% static "css/analytics.css" %}{% endblock %}
+{% block body %}
+  
+{% include 'includes/nav.html'%}
+
+<div class="analytics-page">
+  <div class="sidebar">
+    <a href="{%url 'chief_dashboard'%}"><h2>Dashboard</h2></a>
+      <ul>
+          <li>
+              <a href="{%url 'children_homes'%}">
+                  <span class="icon">🏠</span>
+                  <span class="text">Homes</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'users'%}">
+                  <span class="icon">👥</span>
+                  <span class="text">Users</span>
+              </a>
+          </li>
+          <li>
+              <a href="{%url 'most_visited_home'%}">
+                  <span class="icon">📊</span>
+                  <span class="text">Analytics</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="{%url 'most_in_need_home'%}">
+                <span class="icon">📊</span>
+                <span class="text">Analytics</span>
+            </a>
+        </li>
+      </ul>
+  </div>
+  <div class="main-content">
+    <h1>The Visited Homes</h1>
+    <h2>Upcoming Visits</h2>
+<ul>
+    {% comment %} {% for visit in upcoming_visits %}
+        <li>{{ visit.user }} is visiting {{ visit.childrens_home }} on {{ visit.visit_date }}</li>
+    {% endfor %} {% endcomment %}
+    <li>Yukio on Saturday</li>
+    <li>mavitu on sunday</li>
+</ul>
+    <div class="analytics-cards">
+        <!-- Cards for top 5 most visited homes -->
+        <div class="analytics-card">
+            <h2>Home Name</h2>
+            <p>Visits: 100</p>
+            <!-- Additional information about the home -->
+        </div>
+        <!-- Repeat for the other top 4 homes -->
+    </div>
+</div>
+</div>
+
+{% endblock %}

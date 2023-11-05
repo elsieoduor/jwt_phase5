@@ -1,0 +1,85 @@
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  margin-top: 91px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Hide text by default */
+.text {
+  display: none;
+}
+
+/* Display text when hovered */
+.sidebar a:hover .text {
+  display: inline;
+}
+
+/* Display icons when not hovered */
+.sidebar a .icon {
+  display: inline;
+}
+
+.sidebar a:hover .icon {
+  display: none;
+}
+
+/* Styling links */
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Main content styles */
+.main-content {
+  margin-top: 30px; /* Adjust the margin to position the content below the navbar */
+  padding: 20px;
+  margin-left: 300px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cards for displaying analytics */
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Display 5 cards in a row */
+  gap: 20px;
+}
+
+.analytics-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background: #f5f5f5;
+}
+
+.analytics-card h2 {
+  margin-bottom: 10px;
+}

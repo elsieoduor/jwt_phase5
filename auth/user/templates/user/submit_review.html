@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block title %}Submit Form{% endblock %} 
+{% block css %}{% static "css/register.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+
+<main class="main">
+  <div class="container">
+    <h1>Review</h1>
+     
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+      {% comment %} {{ form|crispy }} {% endcomment %}
+      <button type="submit">Submit</button>
+        
+    </form>
+  </div>
+
+{% endblock %} 

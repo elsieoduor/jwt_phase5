@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block title %}About{% endblock %} 
+{% block css %}{% static "css/about.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+<main class="main">
+  <div class="hero">
+    <div class="carousel">
+        <img src="{% static 'images/children2.jpg'%}" alt="Image 1">
+    </div>
+    <div class="hero-text">
+        <h1>About Us</h1>
+    </div>
+  </div>
+    <section class="mission-vision">
+      <div class="mission">
+        <h2>Mission</h2>
+        <p>Our mission is to provide a safe and nurturing environment for children in need.</p>
+      </div>
+      
+      <div class="vision">
+        <h2>Vision</h2>
+        <p>We envision a world where every child has a loving and supportive home.</p>
+      </div>
+    </section>
+    
+    <section class="what-we-have-done">
+      <h2>What We Have Done</h2>
+      <p>Here are some of our achievements and milestones.</p>
+      <div class="achievements">
+        <div class="achievement">
+          <img src="{% static 'images/school.jpg' %}" alt="Achievement 1">
+          <p>Description of Achievement 1</p>
+        </div>
+        <div class="achievement">
+          <img src="{% static 'images/givingbread.jpg' %}" alt="Achievement 2">
+          <p>Description of Achievement 2</p>
+        </div>
+        <div class="achievement">
+          <img src="{% static 'images/building_homes.jpg' %}" alt="Achievement 2">
+          <p>Description of Achievement 2</p>
+        </div>
+        <div class="achievement">
+          <img src="{% static 'images/assist_child.jpg' %}" alt="Achievement 2">
+          <p>Description of Achievement 2</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="features">
+      <h2>Features of Our Organization</h2>
+      <p>Highlighting the key features of our organization.</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+      </ul>
+    </section>
+    
+    <section class="donations">
+      <h2>Donate Now</h2>
+      <p>Your support makes a difference. Donate now to help our cause.</p>
+      <p>Contact us at donate@childrenshome.org for donation information.</p>
+    </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2023 Hearts to Homes.  All Rights Reserved.</p>
+</footer>
+{% endblock %} 

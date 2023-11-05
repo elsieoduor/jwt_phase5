@@ -1,0 +1,114 @@
+/* Sidebar-specific styles */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  margin-top: 91px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+/* Hide text by default */
+.text {
+  display: none;
+}
+
+/* Display text when hovered */
+.sidebar a:hover .text {
+  display: inline;
+}
+
+/* Display icons when not hovered */
+.sidebar a .icon {
+  display: inline;
+}
+
+.sidebar a:hover .icon {
+  display: none;
+}
+
+/* Styling links */
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 400px; /* Adjust according to sidebar width */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Header section with search bar and add button */
+.main-content .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.main-content .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.main-content input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.main-content .search-button,
+.main-content .add-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-content .add-button {
+  background: #337ab7;
+  color: #fff;
+}
+
+.main-content .add-button:hover {
+  background: #265a91;
+}
+
+/* User cards section */
+.main-content .user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.main-content .user-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background: #f5f5f5;
+}

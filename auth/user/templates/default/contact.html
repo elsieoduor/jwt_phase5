@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block title %}Contact{% endblock %} 
+{% block css %}{% static "css/contact.css" %} {% endblock %}
+{% block body %}
+
+{% include 'includes/nav.html'%}
+
+
+<main class="main">
+  <h3>Contact Us:</h3>
+<div class="contacts-container">
+  <div class="contact-card">
+    <h2>Hearts to Homes</h2>
+    <p>Email: heartstohomes@gmail.com</p>
+    <p>Contact: +254 456-789041</p>
+    <p>Location: Nairobi,Kenya </p>
+  </div>
+  <div class="map-container">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.279369547007!2d-122.45441740400358!3d37.78366682269589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6db864e4c9%3A0x4b54b0e7768c2105!2s123+Main+St%2C+Anytown%2C+CA+91234!5e0!3m2!1sen!2sus!4v1669213236186!5m2!1sen!2sus"></iframe>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2023 Hearts to Homes.  All Rights Reserved.</p>
+</footer>
+{% endblock %} 
