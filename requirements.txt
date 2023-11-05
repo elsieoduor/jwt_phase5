@@ -1,0 +1,14 @@
+# Django framework
+Django
+
+# Image handling
+Pillow
+
+# Django REST framework
+djangorestframework
+
+# CORS handling
+django-cors-headers
+
+# JSON Web Token (JWT) support
+PyJWT
