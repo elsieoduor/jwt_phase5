@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import User
 from .models import User, ChildrenOrphanage, Donation, Visit, Review
 from rest_framework import serializers
-# from django.contrib.auth import authenticate
+
 
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
